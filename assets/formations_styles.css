@@ -1,0 +1,196 @@
+@import 'main.css';
+.formations {
+    background-color: var(--secondaryColor);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /*background-color: var(--mainColor);*/
+    color: var(--secondaryColor);
+    box-sizing: border-box;
+    width: auto;
+    height: 100vh;
+    padding: var(--primaryPadding);
+}
+
+.formations h2 {
+    margin-top: 110px;
+    margin-bottom: 0;
+}
+
+.carousel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--primaryPadding);
+    font-family: var(--textFont);
+    /*background-color: var(--mainColor);*/
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 80%;
+}
+
+input[type=radio] {
+    display: none;
+}
+
+.card {
+    position: absolute;
+    width: 60%;
+    height: 100%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    transition: transform .4s ease;
+    cursor: pointer;
+}
+
+.container {
+    width: 100%;
+    max-width: 800px;
+    max-height: 600px;
+    height: 100%;
+    transform-style: preserve-3d;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cards {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin-bottom: 20px;
+}
+
+.formations img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+#item-1:checked~.cards #photo-4, #item-2:checked~.cards #photo-1, #item-3:checked~.cards #photo-2, #item-4:checked~.cards #photo-3 {
+    transform: translatex(-40%) scale(.8);
+    opacity: .4;
+    z-index: 0;
+}
+
+#item-1:checked~.cards #photo-3, #item-2:checked~.cards #photo-4, #item-3:checked~.cards #photo-1, #item-4:checked~.cards #photo-2 {
+    transform: translatex(0%) scale(.8);
+    opacity: .4;
+    z-index: 0;
+}
+
+#item-1:checked~.cards #photo-2, #item-2:checked~.cards #photo-3, #item-3:checked~.cards #photo-4, #item-4:checked~.cards #photo-1 {
+    transform: translatex(40%) scale(.8);
+    opacity: .4;
+    z-index: 0;
+}
+
+#item-1:checked~.cards #photo-1, #item-2:checked~.cards #photo-2, #item-3:checked~.cards #photo-3, #item-4:checked~.cards #photo-4 {
+    transform: translatex(0) scale(1);
+    opacity: 1;
+    z-index: 1;
+}
+
+.player {
+    /*background-color: var(--darkColor);*/
+    background: rgb(19, 20, 20);
+    background: radial-gradient(circle, rgba(19, 20, 20, 1) 0%, rgba(40, 40, 40, 1) 100%);
+    border-radius: 8px;
+    padding: auto;
+    padding: 30px 20px;
+    width: 400px;
+    min-width: 320px;
+}
+
+.upper-part {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    width: 500px;
+    height: 60px;
+    overflow: hidden;
+}
+
+.photo-info {
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    height: 50px;
+    padding: 12px;
+}
+
+.photo-info .title {
+    color: var(--lightColor);
+    font-family: var(--subTitleFont);
+    font-size: 30px;
+    line-height: 24px;
+    text-transform: uppercase;
+}
+
+.sub-line {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.subtitle {
+    font: var(-textFont);
+    font-size: 100%;
+    /*Mettre 13px pour le media query!!*/
+    line-height: 16px;
+    color: var(--lightColor);
+}
+
+.info-area {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 30px;
+    transition: transform .4s ease-in;
+}
+
+#item-1:checked~.player #test {
+    transform: translateY(0);
+}
+
+#item-2:checked~.player #test {
+    transform: translateY(-25%);
+}
+
+#item-3:checked~.player #test {
+    transform: translateY(-50%);
+}
+
+#item-4:checked~.player #test {
+    transform: translateY(-75%);
+}
+
+@media screen and (max-width: 600px) {
+    .formations h2 {
+        font-size: 3.2em;
+        margin: 40px 0 30px 0;
+    }
+    .info-area {
+        left: 0;
+        top: -10%;
+    }
+    .player {
+        min-width: none;
+        width: 300px;
+    }
+    .upper-part {
+        width: 100%;
+    }
+    .photo-info {
+        width: 100%;
+    }
+}

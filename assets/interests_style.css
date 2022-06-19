@@ -1,0 +1,116 @@
+@import 'main.css';
+.interests {
+    background: rgb(19, 20, 20);
+    background: radial-gradient(circle, rgba(19, 20, 20, 1) 0%, rgba(40, 40, 40, 1) 100%);
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 0;
+    height: 100vh;
+}
+
+.interests h3 {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: var(--lightColor);
+    font-family: var(--textFont);
+}
+
+.interests-main {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 80px;
+    margin-bottom: var(--thirdPadding);
+    padding: 0;
+}
+
+.interests .container {
+    width: 25%;
+    margin: 0 10px;
+}
+
+.interests .image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.interests .overlay {
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    right: 0;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.7);
+    overflow: hidden;
+    width: 100%;
+    height: 0;
+    transition: .5s ease;
+}
+
+.interests .container:hover .overlay {
+    bottom: 0;
+    height: 100%;
+}
+
+.interests .text {
+    white-space: nowrap;
+    color: var(--lightColor);
+    font-size: 2.5em;
+    font-family: var(--subTitleFont);
+    position: absolute;
+    overflow: hidden;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}
+
+.interests .container p {
+    white-space: nowrap;
+    color: var(--lightColor);
+    font-size: 1.2em;
+    font-family: var(--textFont);
+    position: absolute;
+    overflow: hidden;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}
+
+@media screen and (max-width: 600px) {
+    .interests-main {
+        flex-direction: column;
+        align-items: center;
+    }
+    .interests h2 {
+        font-size: 3.2em;
+        margin-bottom: 10px;
+    }
+    .interests-main {
+        height: 600px;
+        margin-top: 70px;
+    }
+    .interests .container {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    .interests img {
+        width: 100%;
+    }
+    .text {
+        font-size: 1.8em;
+    }
+    .interests .container p {
+        font-size: 0.9em;
+    }
+}
