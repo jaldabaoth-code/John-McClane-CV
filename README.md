@@ -1,4 +1,4 @@
-<h1>John McClane CV (Project 1, WCS)</h1>
+<h1>John McClane CV (Project 1, WCS Web PHP)</h1>
 
 ### Create a CV website for a fictional character "John McClane" from the movie "Die Hard"
 
