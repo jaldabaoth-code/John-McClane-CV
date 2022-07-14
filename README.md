@@ -13,4 +13,4 @@ To launch the PHP server : <b>php -S localhost:8000</b>
 
 ## The Links
 
-<a href="https://github.com/wonecode/Projet-1-WCS">Link to the repository of project where we worked during the <b>WCS Project 1</b></a>
+<a href="https://github.com/wonecode/Projet-1-WCS">Link to the repository of project where we worked during <b>WCS Web Project 1</b></a>
