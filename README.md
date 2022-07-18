@@ -7,7 +7,10 @@
 
 ### Steps
 
-To launch the PHP server : <b>php -S localhost:8000</b>
+1. Clone the repo from GitHub : `git clone git@github.com:jaldabaoth-code/John-McClane-CV.git`
+2. Enter the directory : `cd John-McClane-CV`
+3. Run the internal PHP webserver with `php -S localhost:8000`
+4. Go to <b>localhost:8000</b> with your favorite browser
 
 ---
 
